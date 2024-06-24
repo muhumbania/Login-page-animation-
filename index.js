@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll('.input');
-
+const register = document.getElementById('register');
 
 inputs.forEach(function(input){
     input.addEventListener('focus', function(){
@@ -20,3 +20,6 @@ inputs.forEach(function(input){
     
 });
 
+register.addEventListener('click', function(){
+    document.getElementById('main').style.transform = "rotateY(180deg)";
+});

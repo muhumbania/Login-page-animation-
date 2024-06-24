@@ -9,15 +9,15 @@
 </head>
 <body>
     <div class="h-[100vh] flex justify-center items-center bg-gray-200 gap-8">
-        <div class="bg-white flex flex-col items-center p-6 rounded-lg">
+        <div id="main" class="bg-white flex flex-col items-center p-6 rounded-lg ease-in-out duration-700">
             <h1 class="text-lg mb-2">Sign in</h1>
             <form action="" method="post" class="flex flex-col gap-6 w-[280px] justify-center text-gray-600">
                 <div class="relative">
-                    <label for="username" class="absolute left-2  bottom-7 bg-white px-1 text-slate-400 ease-in-out duration-300 hidden">username</label>
+                    <label for="username" class="absolute left-2  bottom-7 bg-white px-1 text-slate-400 ease-in-out duration-300 text-sm hidden">username</label>
                     <input type="text" id="username" name="username" placeholder="username" class="input placeholder:text-slate-400 p-2 border border-slate-300 focus:outline-none text-sm focus:text-slate-600 rounded-lg w-full" required>
                 </div>
                 <div class="relative">
-                    <label for="password" class="absolute left-2  bottom-7 bg-white px-1 text-slate-400 ease-in-out duration-300 hidden">password</label>
+                    <label for="password" class="absolute left-2  bottom-7 bg-white px-1 text-slate-400 ease-in-out duration-300 text-sm hidden">password</label>
                     <input type="password" id="password" name="password" placeholder="password" class="input placeholder:text-slate-400 p-2 border border-slate-300 focus:outline-none text-sm focus:text-slate-600 rounded-lg w-full" required>
                 </div>
                 
@@ -31,7 +31,7 @@
                 </div>
                 <p class="text-red-400 text-sm"></p>
                 <input type="submit" value="Sign in" class="bg-blue-500 text-white text-md font-medium p-1 rounded-md cursor-pointer w-full">
-                <p>Don't have an account? <a href="/register" class="underline underline-offset-2 text-blue-500 font-bold">Sign up</a></p>
+                <p>Don't have an account? <a id="register" class="cursor-pointer  underline-offset-2 text-blue-500 font-bold">Sign up</a></p>
             </form>
         </div>
     </div>
