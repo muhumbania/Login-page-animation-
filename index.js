@@ -1,5 +1,10 @@
 const inputs = document.querySelectorAll('.input');
-const register = document.getElementById('register');
+const registerBtn = document.getElementById('registerBtn');
+const loginBtn = document.getElementById('loginBtn');
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+
+const mainDiv = document.getElementById('main');
 const position = false;
 
 inputs.forEach(function(input){
@@ -21,29 +26,20 @@ inputs.forEach(function(input){
     
 });
 
-register.addEventListener('click', function(){
+registerBtn.addEventListener('click', function(){
     
-});
-
-register.addEventListener('click', function(){
-    document.getElementById('main').style.transform = "rotateY(180deg)";
-    position = !position;
-
-    if(position){
-
-        Yrotation("none", "inline", "hide details", "rotateY(180deg)");
-    }else{
-
-        Yrotation("inline", "none", "show details", "rotateY(0deg)");
-    }
-});
-
-function Yrotation(hiddenView, showedView, legend, degree){
+    mainDiv.style.transform = "rotateY(180deg)";
+    registerForm.style.transform = "rotateY(180deg)";
     setTimeout(function(){
-        card.style.transform = degree;
-        document.querySelector('.hidden-visa').style.display = hiddenView;
-        document.querySelector('.showed-visa').style.display = showedView;
-        showText.innerHTML = legend;
-        button.setAttribute('name', legend.substring(0, 4));
+        loginForm.classList.add("hidden");
     }, 500);
-}
+});
+
+loginBtn.addEventListener('click', function(){
+    
+    mainDiv.style.transform = "rotateY(0deg)";
+    registerForm.style.transform = "rotateY(0deg)";
+    setTimeout(function(){
+        loginForm.classList.remove("hidden");
+    }, 500);
+});

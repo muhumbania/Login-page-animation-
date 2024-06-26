@@ -1,0 +1,7 @@
+/* #registerForm{
+    transform: rotateY(180deg);
+} */
+
+#registerForm, #loginForm, #main{
+    transition: transform 1s ease-in-out;
+}
